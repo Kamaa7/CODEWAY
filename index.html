@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #ff0000;
+    }
+
+    header {
+      background-color: #000;
+    }
+
+    header a {
+      color: #ff0000;
+    }
+
+    header button {
+      background-color: #ff0000;
+      border-color: #ff0000;
+    }
+
+    .kamstore-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff0000;
+    }
+
+    /* Additional Styling */
+    .explore-button {
+      background-color: #ff7575; /* Light Red */
+      color: #fff;
+    }
+
+    .explore-button:hover {
+      background-color: #ff4040; /* Darker Red on hover */
+    }
+  </style>
+  <script>
+    function handleButtonClick(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</head>
+
+<body class="font-sans">
+
+  <!-- Header Section -->
+  <header id="headerSection" class="bg-black text-red-500 body-font shadow-lg">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <span class="kamstore-logo">KamStore</span>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a href="#" onclick="handleButtonClick('heroSection')" class="mr-5 hover:text-red-500">Home</a>
+        <a href="#" onclick="handleButtonClick('statsSection')" class="mr-5 hover:text-red-500">About</a>
+        <a href="#" onclick="handleButtonClick('contactSection')" class="mr-5 hover:text-red-500">Contact</a>
+      </nav>
+      <button onclick="handleButtonClick('headerSection')" class="inline-flex items-center bg-red-500 text-black border-0 py-1 px-3 focus:outline-none hover:bg-red-600 rounded text-base mt-4 md:mt-0">Button
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="heroSection" class="hero text-black body-font bg-black">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-red-500">Dark Jeans and Nikes
+          <br class="hidden lg:inline-block">Tap on with Nike
+        </h1>
+        <p class="mb-8 leading-relaxed">Explore our carefully curated selection of Nike sneakers, ranging from iconic classics to cutting-edge designs. Immerse yourself in a shopping experience that showcases the perfect blend of comfort, durability, and trendsetting style. Whether you're a dedicated athlete, a street-style enthusiast, or someone who appreciates the fusion of fashion and function, we have the perfect pair for you.</p>
+        <div class="flex justify-center">
+          <button onclick="handleButtonClick('statsSection')" class="explore-button inline-flex text-black py-2 px-6 focus:outline-none rounded text-lg">Explore Now</button>
+        </div>
+      </div>
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded" alt="hero" src="https://source.unsplash.com/720x600/?shoe,nike">
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="statsSection" class="stats text-red-500 body-font bg-black">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4 text-center">
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2 class="title-font font-medium sm:text-4xl text-3xl text-red-500">2.7K</h2>
+          <p class="leading-relaxed">Users</p>
+        </div>
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2 class="title-font font-medium sm:text-4xl text-3xl text-red-500">1.8K</h2>
+          <p class="leading-relaxed">Subscribes</p>
+        </div>
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2 class="title-font font-medium sm:text-4xl text-3xl text-red-500">35</h2>
+          <p class="leading-relaxed">Downloads</p>
+        </div>
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2 class="title-font font-medium sm:text-4xl text-3xl text-red-500">4</h2>
+          <p class="leading-relaxed">Products</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="aboutSection" class="about text-red-500 body-font bg-black">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4 text-center">
+        <div class="p-4 sm:w-full w-full">
+          <h2 class="title-font font-medium sm:text-4xl text-3xl text-red-500">About Us</h2>
+          <p class="leading-relaxed">Welcome to KamStore, your one-stop destination for the latest trends in Nike sneakers. Our mission is to provide you with a seamless shopping experience, offering a diverse collection of sneakers that cater to various styles and preferences.</p>
+          <p class="leading-relaxed">At KamStore, we believe in the perfect blend of comfort, style, and innovation. Our curated selection includes iconic classics and the latest cutting-edge designs, ensuring that you can find the perfect pair for any occasion.</p>
+          <p class="leading-relaxed">Explore our website, discover the world of Nike sneakers, and elevate your footwear game with KamStore.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contactSection" class="contact text-red-500 body-font bg-black">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-12">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-red-500">Contact Us</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Feel free to catch up with us with your suggestions and love.</p>
+      </div>
+      <div class="lg:w-1/2 md:w-2/3 mx-auto">
+        <div class="flex flex-wrap -m-2">
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="name" class="leading-7 text-sm text-red-500">Name</label>
+              <input type="text" id="name" name="name" class="w-full bg-black bg-opacity-50 rounded border border-red-500 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-base outline-none text-red-500 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="email" class="leading-7 text-sm text-red-500">Email</label>
+              <input type="email" id="email" name="email" class="w-full bg-black bg-opacity-50 rounded border border-red-500 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-base outline-none text-red-500 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <div class="relative">
+              <label for="message" class="leading-7 text-sm text-red-500">Message</label>
+              <textarea id="message" name="message" class="w-full bg-black bg-opacity-50 rounded border border-red-500 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-red-500 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <button onclick="handleButtonClick('headerSection')" class="flex mx-auto explore-button border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Explore Now</button>
+          </div>
+          <div class="p-2 w-full pt-8 mt-8 border-t border-red-200 text-center">
+            <a class="text-red-500">kam.store@email.com</a>
+            <p class="leading-normal my-5">49 New Delhi.
+              <br>Saint Cloud, MN 56301
+            </p>
+            <span class="inline-flex">
+              <a class="text-red-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-4 text-red-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M22 2a2 2 0 00-2 2v14a2 2 0 01-2 2H6.3a1 1 0 00-.71.29L2 21l1.7-5.12a1 1 0 00-.27-.94L3 14l-1.74-1.74a1 1 0 00-.94-.26L2 12l-1.7-5.12A1 1 0 00-.01 6H2a2 2 0 012-2h16a2 2 
